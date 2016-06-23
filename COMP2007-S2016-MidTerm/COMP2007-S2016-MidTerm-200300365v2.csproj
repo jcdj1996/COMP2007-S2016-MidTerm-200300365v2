@@ -104,6 +104,7 @@
     <Content Include="Models\TodoModel.edmx.diagram">
       <DependentUpon>TodoModel.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\COMP2007-S2016-MidTerm-200300365v2.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
