@@ -47,15 +47,15 @@ namespace COMP2007_S2016_MidTerm
             int selectedRow = e.RowIndex;
 
             // get the selected ToDoID using the Grid's DataKey collection
-            int ToDoID = Convert.ToInt32(ToDoGridView.DataKeys[selectedRow].Values["TodoID"]);
+            int TodoID = Convert.ToInt32(ToDoGridView.DataKeys[selectedRow].Values["TodoID"]);
 
             // use EF to find the selected ToDo in the DB and remove it
             using (TodoConnection db = new TodoConnection())
             {
                 // create object of the ToDo class and store the query string inside of it
-                Todo deletedToDo = (from ToDoRecords in db.Todos
-                                    where ToDoRecords.TodoID == ToDoID
-                                    select ToDoRecords).FirstOrDefault();
+                Todo deletedToDo = (from TodoRecords in db.Todos
+                                    where TodoRecords.TodoID == TodoID
+                                    select TodoRecords).FirstOrDefault();
 
                 // remove the selected ToDo from the db
                 db.Todos.Remove(deletedToDo);

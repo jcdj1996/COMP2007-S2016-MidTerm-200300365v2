@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Tom\Documents\COMP2007\COMP2007-S2016-MidTerm\COMP2007-S2016-MidTerm\Models\TodoModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\James\Documents\Visual Studio 2015\Projects\COMP2007-S2016-MidTerm-200300365v2\COMP2007-S2016-MidTerm\Models\TodoModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
