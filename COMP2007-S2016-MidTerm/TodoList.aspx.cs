@@ -53,9 +53,9 @@ namespace COMP2007_S2016_MidTerm
             using (TodoConnection db = new TodoConnection())
             {
                 // create object of the ToDo class and store the query string inside of it
-                Todo deletedToDo = (from TodoRecords in db.Todos
-                                    where TodoRecords.TodoID == TodoID
-                                    select TodoRecords).FirstOrDefault();
+                Todo deletedToDo = (from todo in db.Todos
+                                    where todo.TodoID == TodoID
+                                    select todo).FirstOrDefault();
 
                 // remove the selected ToDo from the db
                 db.Todos.Remove(deletedToDo);

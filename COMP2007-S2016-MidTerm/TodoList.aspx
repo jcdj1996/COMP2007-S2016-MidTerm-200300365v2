@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TodoList.aspx.cs" Inherits="COMP2007_S2016_MidTerm.TodoList1" %>
+<!-- TO DO LIST BY JAMES JENNINGS
+    SN: 20300365
+    JUNE 23 2016 -->
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <a href="TodoDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>Add New</a>
     <div class="container">
@@ -14,7 +17,7 @@
                     </asp:DropDownList>
                 </div>
     <asp:GridView runat="server" CssClass="table table-bordered table-striped table-hover"
-                    ID="ToDoGridView" AutoGenerateColumns="false" DataKeyNames="ToDoID"
+                    ID="ToDoGridView" AutoGenerateColumns="false" DataKeyNames="TodoID"
                     OnRowDeleting="ToDoGridView_RowDeleting" AllowPaging="true" PageSize="3"
                     OnPageIndexChanging="ToDoGridView_PageIndexChanging" AllowSorting="true"
                     OnSorting="ToDoGridView_Sorting" OnRowDataBound="ToDoGridView_RowDataBound" 
@@ -23,7 +26,7 @@
                         <asp:BoundField DataField="ToDoID" HeaderText="ToDo ID" Visible="false" SortExpression="ToDoID" />
                         <asp:BoundField DataField="ToDoName" HeaderText="Task Name" Visible="true" SortExpression="ToDoName" />
                         <asp:BoundField DataField="ToDoNotes" HeaderText="Notes" Visible="true" SortExpression="ToDoNotes" />
-                        <asp:BoundField DataField="Completed" HeaderText="Completed" Visible="true" />
+                        <asp:CheckBoxField DataField="Completed" ReadOnly="True" />
                         
                         <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" 
                             NavigateUrl="/ToDoDetails.aspx.cs" ControlStyle-CssClass="btn btn-primary btn-sm" runat="server"

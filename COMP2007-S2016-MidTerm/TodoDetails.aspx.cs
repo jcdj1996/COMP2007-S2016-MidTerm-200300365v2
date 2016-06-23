@@ -37,7 +37,7 @@ namespace COMP2007_S2016_MidTerm
                 {
                     TaskNameTextBox.Text = updatedTodo.TodoName;
                     NotesTextBox.Text = updatedTodo.TodoNotes;
-                    CompleteCheck.Checked = (bool) updatedTodo.Completed;
+                    CompleteCheck.Checked = updatedTodo.Completed.Value;
                 }
             }
         }
